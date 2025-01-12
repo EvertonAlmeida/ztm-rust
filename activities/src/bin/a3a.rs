@@ -10,5 +10,16 @@
 // * Use an if..else block to determine which message to display
 // * Use the println macro to display messages to the terminal
 
-fn main() {}
+fn main() {
+    let value: bool = false;
+    let message: &str = display_message(value);
+    println!("{}", message);
+}
 
+fn display_message(value: bool) -> &'static str {
+    if value {
+        "hello"
+    } else {
+        "goodbye"
+    }
+}
